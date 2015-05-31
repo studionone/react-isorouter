@@ -1,0 +1,28 @@
+{
+  "name": "react-isorouter",
+  "version": "0.0.1",
+  "description": "An isomorphic HTML5-history based router for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "pushstate",
+    "isomorphic",
+    "es6"
+  ],
+  "author": "Josh Girvin <josh@studionone.com.au>",
+  "license": "MIT",
+  "dependencies": {
+    "common-history": "0.0.1",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.14.1"
+  }
+}
