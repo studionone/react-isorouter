@@ -4,7 +4,7 @@ This is an HTML5 `window.history` based router component for React 0.13, written
 
 ## Documentation
 
-This README will get you up and running quickly, but for more comprehensive usage documentation head to our [documentation site](http://studionone.github.io/react-isorouter).
+This README will get you up and running quickly, but for more comprehensive usage documentation head to our [documentation site](http://studionone.github.io/react-isorouter-docs).
 
 ## Requirements
 
