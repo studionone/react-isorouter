@@ -5,3 +5,5 @@
 - [ ] Abstract Router environments out to handle common tasks correctly
 - [ ] Write more documentation
 - [ ] Publish to `npm` once browser testing has been completed
+- [ ] Add examples to `./examples` and put in `.npmignore`
+- [ ] Move these TODOs to real GitHub issues
