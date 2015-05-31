@@ -1,0 +1,19 @@
+{
+  "plugins": [
+      "react"
+  ],
+
+  "env": {
+    "browser": 1,
+    "node": 1,
+    "es6": 0,
+    "mocha": 1
+  },
+
+  "rules": {
+    "global-strict": 0,
+    "strict": 0,
+    "quotes": 0,
+    "no-unused-vars": 0
+  }
+}
