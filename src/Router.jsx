@@ -1,5 +1,6 @@
 import React from 'react';
 import { HistoryLocation } from 'common-history';
+import RouterError from './RouterError';
 
 global.historyLocation = new HistoryLocation();
 
@@ -23,7 +24,7 @@ class Router extends React.Component
         }
 
         if (currentState === null) {
-            throw new Error('Help!');
+            throw new RouterError('No pathname found or passed to the prop!');
         }
 
         this.state = {
@@ -65,7 +66,12 @@ class Router extends React.Component
         let error = false;
         let child = null;
 
-        this.props.children.forEach((val, key) => {
+        if (typeof this.props.children === 'undefined'
+         || this.props.children.length === 0) {
+            throw new RouterError('You must pass at least one Route to a Router');
+        }
+
+        React.Children.forEach((val, key) => {
             if (typeof val.props.routeName === 'undefined') {
                 error = true;
                 child = val;
@@ -77,8 +83,19 @@ class Router extends React.Component
         }
     }
 
+    // FIXME: Handle the rendering case of a single route properly
     findChildByName(name) {
         let res = null;
+
+        if (React.Children.count(this.props.children) === 0) {
+            throw new Error('No matching child with routeName `' + name + '`');
+        }
+
+        if (React.Children.count(this.props.children) === 1) {
+            if (React.Children.only(this.props.children).props.routeName === name) {
+                return 0;
+            }
+        }
 
         this.props.children.some((el, i) => {
             if (el.props.routeName === name) {

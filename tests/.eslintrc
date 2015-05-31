@@ -14,6 +14,7 @@
     "global-strict": 0,
     "strict": 0,
     "quotes": 0,
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "no-underscore-dangle": 0
   }
 }
